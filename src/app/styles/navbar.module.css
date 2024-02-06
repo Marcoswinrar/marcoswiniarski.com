@@ -1,0 +1,15 @@
+.animated .text {
+  position: relative;
+  display: inline-flex;
+}
+
+.animated .text:nth-child(even) {
+  overflow: hidden;
+  transition: ease-in-out .5s;
+  letter-spacing: -1em;
+  border-bottom: 1px solid #db2777;
+}
+
+.animated:hover .text:nth-child(even) {
+  letter-spacing: 0;
+}
