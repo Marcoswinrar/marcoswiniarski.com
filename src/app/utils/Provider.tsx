@@ -8,5 +8,5 @@ interface Props {
 }
 
 export const Provider = ({ children }: Props) => {
-  return <ThemeProvider attribute="class">{children}</ThemeProvider>;
+  return <ThemeProvider defaultTheme="dark" attribute="class">{children}</ThemeProvider>;
 }

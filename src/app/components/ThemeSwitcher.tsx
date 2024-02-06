@@ -2,6 +2,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { Moon, Sun } from "./Icons";
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme()
@@ -17,7 +18,7 @@ const ThemeSwitcher = () => {
 
   return (
     <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-      {theme === 'dark' ? 'light' : 'dark'}
+      {theme === 'dark' ? <Sun/> : <Moon />}
     </button>
   )
 }
