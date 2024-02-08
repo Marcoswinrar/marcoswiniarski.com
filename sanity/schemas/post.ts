@@ -15,8 +15,7 @@ export const post = {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "title" },
-      validation: (Rule: Rule) => Rule.max(200).error("Max 200 characters")
+      options: { source: "title" }
     },
     {
       name: "publishedAt",
@@ -40,6 +39,12 @@ export const post = {
           fields: [{ type: "text", name: "alt", title: "alt"}]
         }
       ]
+    },
+    {
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      of: [{ type: "reference", to: [{type: "tag"}]}]
     }
   ]
 }
