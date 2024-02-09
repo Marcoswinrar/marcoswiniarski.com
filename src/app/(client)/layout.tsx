@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
-import Navbar from "../components/Navbar";
 import { Provider } from "../utils/Provider";
+import Profile from "../components/Profile";
 import "./globals.css";
-import ToolsBar from "../components/ToolsBar";
 
 const fira = Fira_Code({ subsets: ["latin"] })
 
@@ -21,13 +20,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${fira.className} h-full bg-amber-50 text-indigo-950 dark:bg-slate-950 dark:text-amber-50 dark:selection:bg-purple-500`}>
         <Provider>
-          <Navbar />
-          <main className="mx-auto max-w-7xl px-6">
-            {children}
-          </main>
-          <ToolsBar />
+          <div className="layout-wrapper flex flex-col xl:flex-row">
+            <Profile />
+            <main className="mx-auto max-w-full">
+              {children}
+            </main>
+          </div>
         </Provider>
       </body>
-    </html>
+    </html >
   );
 }

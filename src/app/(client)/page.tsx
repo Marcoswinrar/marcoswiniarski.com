@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import { client } from "../../../sanity/lib/client";
 import Post from "../components/Post";
 
@@ -18,15 +17,11 @@ async function getPosts() {
 }
 
 export default async function Home() {
-  const posts: Post[] = await getPosts()
-  console.log(posts)
+  // const posts: Post[] = await getPosts()
 
   return (
-    <>
-      <Header title="Articles" />
-      {posts?.length > 0 && posts?.map((post) => (
-        <Post key={post._id} post={post} />
-      ))}
-    </>
+    <section>
+      <div>Thats my homepage</div>
+    </section>
   );
 }

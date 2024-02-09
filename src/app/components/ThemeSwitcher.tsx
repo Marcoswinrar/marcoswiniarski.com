@@ -17,7 +17,7 @@ const ThemeSwitcher = () => {
   }
 
   return (
-    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+    <button className="mt-2" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
       {theme === 'dark' ? <Sun/> : <Moon />}
     </button>
   )
