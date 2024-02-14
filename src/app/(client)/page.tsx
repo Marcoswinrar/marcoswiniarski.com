@@ -4,24 +4,32 @@ import Post from "../components/Post";
 async function getPosts() {
   const result = await client.fetch(
     `*[_type == "post"]{
-        title,
-        slug,
-        tags,
-        publishedAt,
-        excerpt,
+        _id,
         body,
-        _id
+        title,
+        excerpt,
+        slug,
+        publishedAt,
+        tags[] -> {
+          _id,
+          slug,
+          name
+        }
     }`
   )
   return result
 }
 
+export const revalidate = 60;
+
 export default async function Home() {
-  // const posts: Post[] = await getPosts()
+  const posts: Post[] = await getPosts()
 
   return (
     <section>
-      <div>Thats my homepage</div>
+      {posts?.length > 0 && posts.map((post) => (
+        <Post key={post?._id} post={post} />
+      ))}
     </section>
   );
 }

@@ -23,7 +23,7 @@ export default function RootLayout({
         <Provider>
           <div className="layout-wrapper flex flex-col xl:flex-row">
             <Profile />
-            <main className="mx-auto max-w-full">
+            <main className="w-screen">
               {children}
             </main>
             <ToolsBar />

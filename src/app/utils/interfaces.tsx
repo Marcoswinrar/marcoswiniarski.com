@@ -1,7 +1,9 @@
 export interface Post {
   title: string,
-  slug: string,
-  publishedAt: { current: string },
+  slug: {
+    current: string
+  },
+  publishedAt: string,
   excerpt: string,
   tags: Tag[],
   _id: string,
