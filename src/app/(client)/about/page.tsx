@@ -1,11 +1,12 @@
+import Link from "next/link"
+import Header from "@/app/components/Header"
 import SocialMedia from "@/app/components/SocialMedia"
 import SocialMediaLinks from "@/app/components/SocialMediaLinks"
-import Link from "next/link"
 
 const about = () => {
   return (
     <section className="mx-auto p-[2rem] text-justify xl:p-[7rem]">
-      <h1 className={headerStyle}>Sobre mim</h1>
+      <Header title="Sobre mim" />
       <p className={pStyle}>Me chamo Marcos, nascido em Capitão Leônidas Marques/PR, trabalho como desenvolvedor front-end, escrevo um pouco nesse blog
         e curto muito um pedal.
       </p>
@@ -21,7 +22,7 @@ const about = () => {
         Adoro trabalhar em equipe e principalmente na modalidade remoto, sou comunicativo e gosto de ajudar as pessoas que estão interessadas
         em entrar no mundo do desenvolvimento.
       </p>
-      <h1 className={headerStyle}>Contato</h1>
+      <Header title="Contato" />
       <p className={pStyle}>
         Caso quiser, você pode entrar em contato comigo através das informações e links a baixo.
       </p>
@@ -30,11 +31,6 @@ const about = () => {
     </section>
   )
 }
-
-const headerStyle = `
-  text-4xl
-  mb-5
-`
 
 const pStyle = `
   mb-5

@@ -36,7 +36,7 @@ const page = async ({params}: Params) => {
   console.log(post)
 
   return (
-    <section>
+    <section className="mx-auto p-[2rem] text-justify xl:p-[7rem]">
       <Header title={post?.excerpt} />
     </section>
   )

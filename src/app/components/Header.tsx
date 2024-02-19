@@ -5,7 +5,7 @@ interface Params {
 
 const Header = ({title}: Params) => {
   return (
-    <h1 className="text-center m-5 uppercase">{title}</h1>
+    <h1 className="text-4xl mb-5">{title}</h1>
   )
 }
 
