@@ -1,9 +1,13 @@
 import Link from "next/link"
 import { Github, Linkedin } from "./Icons"
 
-const SocialMediaLinks = () => {
+interface Props {
+  hidden: boolean
+}
+
+const SocialMediaLinks = ({hidden = true}: Props) => {
   return (
-    <nav className="hidden xl:flex mx-auto mb-2 xl:my-6 xl:justify-center">
+    <nav className={`${hidden ? 'hidden': 'flex'} xl:flex mx-auto mb-2 my-6 justify-center`}>
       <Link className="mx-3" target="_blank" href={"https://github.com/Marcoswinrar"}>
         <Github />
       </Link>

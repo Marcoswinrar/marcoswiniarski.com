@@ -1,8 +1,12 @@
 import Link from "next/link"
 
-const SocialMedia = () => {
+interface Props {
+  hidden: boolean
+}
+
+const SocialMedia = ({ hidden = true }: Props) => {
   return (
-    <section className="hidden xl:block text-center my-3">
+    <section className={`${hidden ? 'hidden': 'block'} xl:block text-center my-3`}>
       <Link href={"mailto:marcoswinrar@gmail.com"}>marcoswinrar@gmail.com</Link>
       <p>+55 (45)99918-9193</p>
     </section>
