@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 interface Props {
-  hidden: boolean
+  hidden?: boolean
 }
 
 const SocialMedia = ({ hidden = true }: Props) => {

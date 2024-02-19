@@ -2,10 +2,10 @@ import Image from "next/image"
 
 const Avatar = () => {
   return (
-    <section className="avatar-profile flex xl:flex-col items-center xl:my-3 xl:my-6 text-sm xl:text-base">
-      <figure className="w-[3rem] xl:w-max xl:h-max mr-6 xl:mr-0">
+    <section className={avatarStyle}>
+      <figure className={figureStyle}>
         <Image
-          className="mx-3 xl:mx-6 xl:mx-auto rounded-full bg-indigo-500"
+          className={imageStyle}
           alt="Foto minha de perfil, com terno e sorrindo."
           src={"https://avatars.githubusercontent.com/u/46204917?v=4"}
           width={"84"}
@@ -22,5 +22,31 @@ const Avatar = () => {
     </section>
   )
 }
+
+const avatarStyle = `
+  flex 
+  xl:flex-col 
+  items-center 
+  xl:my-3 
+  xl:my-6 
+  text-sm 
+  xl:text-base
+`
+
+const imageStyle = `
+  rounded-full 
+  bg-indigo-500
+  mx-3 
+  xl:mx-6 
+  xl:mx-auto 
+`
+
+const figureStyle = `
+  w-[3rem] 
+  xl:w-max 
+  xl:h-max 
+  mr-6 
+  xl:mr-0
+`
 
 export default Avatar

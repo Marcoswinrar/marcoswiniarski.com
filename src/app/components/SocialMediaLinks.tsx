@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Github, Linkedin } from "./Icons"
 
 interface Props {
-  hidden: boolean
+  hidden?: boolean
 }
 
 const SocialMediaLinks = ({hidden = true}: Props) => {

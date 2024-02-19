@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} h-full bg-amber-50 text-indigo-950 dark:bg-slate-950 dark:text-amber-50 dark:selection:bg-purple-500`}>
+      <body className={`${font.className} ${bodyStyle}`}>
         <Provider>
           <div className="layout-wrapper flex flex-col xl:flex-row">
             <Profile />
@@ -33,3 +33,12 @@ export default function RootLayout({
     </html >
   );
 }
+
+const bodyStyle = `
+  h-full 
+  bg-amber-50 
+  text-indigo-950 
+  dark:bg-slate-950 
+  dark:text-amber-50 
+  dark:selection:bg-purple-500
+`
