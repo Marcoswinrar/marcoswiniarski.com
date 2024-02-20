@@ -11,7 +11,7 @@ const font_light = Nunito({ weight: "300", subsets: ["latin"] })
 const Post = ({ post }: Props) => {
   return (
     <Link href={`/posts/${post?.slug?.current}`}>
-      <article className={articleStyle}>
+      <section className={sectionStyle}>
         <div className="hover:text-pink-500">
           <time className="text-xs">
             {new Date(post.publishedAt).toLocaleDateString()}
@@ -25,19 +25,19 @@ const Post = ({ post }: Props) => {
         </div>
         <div className="flex">
           {post.tags?.map((tag) => (
-            <span className="rounded-none bg-pink-700 mx-2 text-xs p-[.3rem]" key={tag?._id}>
-              {tag.name}
+            <span className="mx-2 p-[.3rem] text-purple-500" key={tag?._id}>
+              #{tag.name}
             </span>
           ))}
         </div>
-      </article>
+      </section>
     </Link>
   )
 }
 
 export default Post
 
-const articleStyle = `
+const sectionStyle = `
   text-sm 
   w-full 
   p-3 

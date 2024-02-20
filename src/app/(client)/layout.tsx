@@ -2,37 +2,34 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { Provider } from "../utils/Provider";
 import Profile from "../components/Profile";
-import "./globals.css";
 import ToolsBar from "../components/ToolsBar";
+import "./globals.css";
 
 const font = Nunito({ weight: '600', subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Marcos Eduardo Winiarski",
+  title: "Home | Marcos Eduardo Winiarski",
   description: "A blog developed for dev to dev"
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${font.className} ${bodyStyle}`}>
-        <Provider>
-          <div className="layout-wrapper flex flex-col xl:flex-row">
-            <Profile />
-            <main className="w-screen">
-              {children}
-            </main>
-            <ToolsBar />
-          </div>
-        </Provider>
-      </body>
-    </html >
-  );
-}
+const RootLayout = ({ children }: Readonly<{ children: React.ReactNode; }>) => (
+
+  <html lang="en">
+    <body className={`${font.className} ${bodyStyle}`}>
+      <Provider>
+        <Profile />
+        <main className="xl:pl-[20rem]">
+          {children}
+        </main>
+        <ToolsBar />
+      </Provider>
+    </body>
+  </html >
+);
+
+
+export default RootLayout
+
 
 const bodyStyle = `
   h-full 

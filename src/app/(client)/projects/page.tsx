@@ -1,6 +1,6 @@
 import Header from "@/app/components/Header"
 
-const page = () => {
+const Projects = () => {
   return (
     <section className="mx-auto p-[2rem] xl:p-[7rem]">
       <Header title="Projects" />
@@ -8,4 +8,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Projects

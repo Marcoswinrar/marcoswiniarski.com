@@ -1,7 +1,7 @@
 import { client } from "../../../sanity/lib/client";
 import Post from "../components/Post";
 
-async function getPosts() {
+ const getPosts = async () => {
   const result = await client.fetch(
     `*[_type == "post"]{
         _id,
@@ -22,7 +22,7 @@ async function getPosts() {
 
 export const revalidate = 60;
 
-export default async function Home() {
+const Home = async () => {
   const posts: Post[] = await getPosts()
 
   return (
@@ -33,3 +33,5 @@ export default async function Home() {
     </section>
   );
 }
+
+export default Home

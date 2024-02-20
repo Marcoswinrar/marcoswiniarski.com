@@ -18,10 +18,12 @@ export default Profile
 
 const profileStyle = `
   profile 
+  fixed
+  z-10
   bg-gradient-to-r 
   from-pink-950 
   to-indigo-950 
   w-full 
-  xl:w-[25rem] 
+  xl:w-[20rem] 
   xl:h-screen
 `
