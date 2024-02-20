@@ -1,9 +1,11 @@
 
 import Link from "next/link";
+import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { client } from "../../../../../sanity/lib/client";
 import { Post } from "@/app/utils/interfaces";
 import Header from "@/app/components/Header";
+import { urlForImage } from "../../../../../sanity/lib/image";
 
 interface Params {
   params: {
@@ -51,6 +53,7 @@ const Post = async ({ params }: Params) => {
       </header>
       <section className={richTextStyle}>
         <PortableText
+          components={portableTextComponent}
           value={post?.body}
         />
       </section>
@@ -60,17 +63,33 @@ const Post = async ({ params }: Params) => {
 
 export default Post;
 
+const portableTextComponent = {
+  types: {
+    image: ({ value }: any) => (
+      <Image
+        src={urlForImage(value)}
+        alt={value?.alt}
+        width={700}
+        height={700}
+        style={{ margin: '0 auto' }}
+      />
+    ),
+  },
+};
+
 const articleStyle = `
   mx-auto 
-  py-[5rem] 
+  py-[2rem] 
   px-[2rem] 
   xl:p-[5rem] 
   text-justify
 `;
 
 const richTextStyle = `
-  mt-14
+  mt-12
   prose-headings:my-5
+  prose-headings:text-purple-500
+  prose-headings:text-1xl
   prose-heading:text-2xl
   prose-p:mb-5
   prose-p:leading-7

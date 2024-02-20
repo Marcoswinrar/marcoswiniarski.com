@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
-import { Provider } from "../utils/Provider";
 import Profile from "../components/Profile";
 import ToolsBar from "../components/ToolsBar";
 import "./globals.css";
@@ -13,16 +12,13 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode; }>) => (
-
   <html lang="en">
     <body className={`${font.className} ${bodyStyle}`}>
-      <Provider>
         <Profile />
-        <main className="xl:pl-[20rem]">
+        <main className={baseLayout}>
           {children}
         </main>
         <ToolsBar />
-      </Provider>
     </body>
   </html >
 );
@@ -30,12 +26,16 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode; }>) => (
 
 export default RootLayout
 
+const baseLayout = `
+  base__
+  xl:pl-[20rem] 
+  max-xl:pt-[4rem]
+  h-screen
+`
 
 const bodyStyle = `
   h-full 
-  bg-amber-50 
-  text-indigo-950 
-  dark:bg-slate-950 
-  dark:text-amber-50 
-  dark:selection:bg-purple-500
+  bg-slate-950 
+  text-amber-50 
+  selection:bg-purple-500
 `

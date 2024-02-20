@@ -17,7 +17,7 @@ import Post from "../components/Post";
         }
     }`
   )
-  return result
+  return result;
 }
 
 export const revalidate = 60;
