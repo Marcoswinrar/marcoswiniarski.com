@@ -5,7 +5,7 @@ const MenuLinks = () => {
     <nav className={navStyle}>
       <Link className={linkStyle} href={"/"}>Home</Link>
       <Link className={linkStyle} href={"/about"}>Sobre Mim</Link>
-      <Link className={linkStyle} href={"/projects"}>Projects</Link>
+      <Link className={linkStyle} href={"/projects"}>Projetos</Link>
     </nav>
   )
 }
@@ -18,10 +18,10 @@ const navStyle = `
   flex-col 
   space-y-5 
   py-6 
-`
+`;
 
 const linkStyle = `
   hover:text-pink-500
-`
+`;
 
-export default MenuLinks
+export default MenuLinks;

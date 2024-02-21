@@ -35,7 +35,7 @@ const Post = ({ post }: Props) => {
   )
 }
 
-export default Post
+export default Post;
 
 const sectionStyle = `
   text-sm 

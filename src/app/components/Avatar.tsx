@@ -49,4 +49,4 @@ const figureStyle = `
   xl:mr-0
 `
 
-export default Avatar
+export default Avatar;

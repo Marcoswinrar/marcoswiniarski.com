@@ -30,6 +30,7 @@ const asideStyle = `
   flex 
   items-center 
   justify-center
+  cursor-pointer
 `
 
 export default ToolsBar

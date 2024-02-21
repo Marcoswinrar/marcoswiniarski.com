@@ -1,8 +1,13 @@
+import { useState } from "react"
 import Link from "next/link"
 
 const MobileMenu = () => {
+  const [hidden, setHidden] = useState(false)
+
   return (
-    <nav className={mobileMenuStyle}>
+    <nav
+      onClick={() => setHidden(!hidden)}
+      className={`${mobileMenuStyle} ${hidden ? 'hidden' : 'flex'}`}>
       <Link className={linkStyle} href={"/"}>Home</Link>
       <Link className={linkStyle} href={"/about"}>Sobre Mim</Link>
       <Link className={linkStyle} href={"/projects"}>Projects</Link>
@@ -26,4 +31,4 @@ const mobileMenuStyle = `
 
 const linkStyle = `hover:text-pink-500 py-3`
 
-export default MobileMenu
+export default MobileMenu;
