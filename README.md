@@ -2,6 +2,6 @@
 
 #### Developed in
 * NextJS
-* Typescript
+* Tailwind CSS
 * SanityCMS  
   
