@@ -1,6 +1,6 @@
-## [Marcoswinrar](https://marcoswinrar.com/) repositório do meu blog pessoal
-desenvolvido com as seguintes tecnologias.
+## [Marcoswinrar](https://marcoswinrar.com/) my personal blog repository.
 
+### Developed in
 * NextJS
 * Typescript
 * SanityCMS  
