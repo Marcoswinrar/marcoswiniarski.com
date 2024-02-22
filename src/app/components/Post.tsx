@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Post } from "../utils/interfaces"
 import { Nunito } from "next/font/google"
+import { dateConverterToPtBr } from "../utils/dateConverter"
 
 interface Props {
   post: Post
@@ -14,7 +15,7 @@ const Post = ({ post }: Props) => {
       <section className={sectionStyle}>
         <div className="hover:text-pink-500">
           <time className="text-xs">
-            {new Date(post.publishedAt).toLocaleDateString()}
+            {dateConverterToPtBr(post?.publishedAt)}
           </time>
           <h1 className="xl:text-lg mb-2">
             {post.title}
@@ -26,7 +27,7 @@ const Post = ({ post }: Props) => {
         <div className="flex">
           {post.tags?.map((tag) => (
             <span className="mx-2 p-[.3rem] text-purple-500" key={tag?._id}>
-              #{tag.name}
+              #{tag?.name}
             </span>
           ))}
         </div>

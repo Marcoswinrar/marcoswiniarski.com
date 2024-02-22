@@ -7,6 +7,7 @@ import { client } from "../../../../../sanity/lib/client";
 import { Post } from "@/app/utils/interfaces";
 import Header from "@/app/components/Header";
 import { urlForImage } from "../../../../../sanity/lib/image";
+import { dateConverterToPtBr } from "@/app/utils/dateConverter";
 
 interface Params {
   params: {
@@ -51,7 +52,7 @@ const Post = async ({ params }: Params) => {
           </span>
         </Link>
         <span className="text-sm">
-          {new Date(post?.publishedAt).toLocaleDateString()}
+          {dateConverterToPtBr(post?.publishedAt)}
         </span>
         <Header title={post?.title} />
         <h2>{post?.excerpt}</h2>
