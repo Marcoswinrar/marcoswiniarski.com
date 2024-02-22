@@ -9,4 +9,4 @@ const Header = ({title}: Params) => {
   )
 }
 
-export default Header
+export default Header;

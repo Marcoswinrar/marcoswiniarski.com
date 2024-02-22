@@ -1,16 +1,17 @@
-import { useState } from "react"
 import Link from "next/link"
+import { MouseEventHandler } from "react"
 
-const MobileMenu = () => {
-  const [hidden, setHidden] = useState(false)
+interface Props {
+  handleMenu: MouseEventHandler<HTMLElement>
+}
 
+const MobileMenu = ({handleMenu}: Props) => {
   return (
-    <nav
-      onClick={() => setHidden(!hidden)}
-      className={`${mobileMenuStyle} ${hidden ? 'hidden' : 'flex'}`}>
+    <nav onClick={handleMenu}  
+      className={`${mobileMenuStyle}`}>
       <Link className={linkStyle} href={"/"}>Home</Link>
       <Link className={linkStyle} href={"/about"}>Sobre Mim</Link>
-      <Link className={linkStyle} href={"/projects"}>Projects</Link>
+      <Link className={linkStyle} href={"/projects"}>Projetos</Link>
     </nav>
   )
 }

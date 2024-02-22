@@ -1,7 +1,13 @@
 import Link from "next/link"
+import { Metadata } from "next";
 import Header from "@/app/components/Header"
 import SocialMedia from "@/app/components/SocialMedia"
 import SocialMediaLinks from "@/app/components/SocialMediaLinks"
+
+export const metadata: Metadata = {
+  title: "Sobre mim | Marcos Eduardo Winiarski",
+  description: "A blog developed for dev to dev"
+};
 
 const About = () => (
   <section className="mx-auto p-[2rem] text-justify xl:p-[7rem]">

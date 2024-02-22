@@ -38,4 +38,5 @@ const bodyStyle = `
   bg-slate-950 
   text-amber-50 
   selection:bg-purple-500
+  tracking-tight 
 `

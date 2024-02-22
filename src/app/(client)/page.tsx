@@ -3,7 +3,7 @@ import Post from "../components/Post";
 
  const getPosts = async () => {
   const result = await client.fetch(
-    `*[_type == "post"]{
+    `*[_type == "post"] | order(publishedAt desc) {
         _id,
         body,
         title,

@@ -12,7 +12,7 @@ const Avatar = () => {
           height={"84"}
         />
       </figure>
-      <div className="text-center my-3">
+      <div className="text-center my-3 max-sm:mr-[5rem]">
         <h1 className="xl:text-2xl">Marcos Eduardo Winiarski</h1>
         <small>Front-end Developer</small>
       </div>
@@ -25,13 +25,14 @@ const Avatar = () => {
 
 const avatarStyle = `
   flex 
-  xl:flex-col 
+  xl:flex-col
   items-center 
   xl:my-3 
   xl:my-6 
   text-sm 
   xl:text-base
-`
+  max-sm:justify-between
+`;
 
 const imageStyle = `
   rounded-full 
@@ -39,14 +40,14 @@ const imageStyle = `
   mx-3 
   xl:mx-6 
   xl:mx-auto 
-`
-
-const figureStyle = `
+`;
+  
+  const figureStyle = `
   w-[3rem] 
   xl:w-max 
   xl:h-max 
-  mr-6 
+  mr-6
   xl:mr-0
-`
+`;
 
 export default Avatar;

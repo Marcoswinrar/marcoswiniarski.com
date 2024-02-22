@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
 import { PortableText } from "@portabletext/react";
 import { client } from "../../../../../sanity/lib/client";
 import { Post } from "@/app/utils/interfaces";
@@ -13,9 +14,10 @@ interface Params {
   }
 }
 
+
 const getPost = async (slug: string) => {
   const query =
-    `*[_type == "post" && slug.current == "${slug}"][0]{
+  `*[_type == "post" && slug.current == "${slug}"][0]{
     _id,
     body,
     title,
@@ -28,14 +30,17 @@ const getPost = async (slug: string) => {
       name
     }
   }`
-
+  
   const post = await client.fetch(query);
   return post;
 }
 
+export const metadata: Metadata = {}
 
 const Post = async ({ params }: Params) => {
   const post: Post = await getPost(params?.slug)
+
+  metadata.title = `${post?.title} | ${post?.excerpt} `
 
   return (
     <article className={articleStyle}>
@@ -82,7 +87,7 @@ const articleStyle = `
   py-[2rem] 
   px-[2rem] 
   xl:p-[5rem] 
-  text-justify
+  xl:text-justify
 `;
 
 const richTextStyle = `

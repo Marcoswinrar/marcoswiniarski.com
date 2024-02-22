@@ -24,7 +24,7 @@ const ProjectCard = ({
         <figure>
           <div className="relative">
             <Image
-              className="m-auto"
+              className="m-auto max-h-[235px]"
               width={510}
               height={510}
               src={imageUrl}
@@ -36,7 +36,7 @@ const ProjectCard = ({
               <h3 className="text-lg">Visualizar</h3>
             </div>
           </div>
-          <figcaption className="text-center">
+          <figcaption className="text-center mt-2">
             {caption}
           </figcaption>
         </figure>
