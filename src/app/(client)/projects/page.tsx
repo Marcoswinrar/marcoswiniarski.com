@@ -9,7 +9,7 @@ const Projects = () => {
 
   return (
     <section className="mx-auto p-[2rem] xl:p-[7rem]">
-      <Header title="Proje" />
+      <Header title="Projetos" />
       <section className="flex flex-col xl:flex-row flex-wrap justify-center mx-auto">
         <ProjectCard
           imageUrl={"https://raw.githubusercontent.com/Marcoswinrar/pokedex/main/public/tela01.png"}
