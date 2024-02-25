@@ -7,4 +7,6 @@
 * NextJS
 * Tailwind CSS
 * SanityCMS  
-  
+
+###Deployed in 
+* Amazon AWS
