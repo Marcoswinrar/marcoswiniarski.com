@@ -6,7 +6,8 @@
 #### Developed in
 * NextJS
 * Tailwind CSS
-* SanityCMS  
+* SanityCMS
+* Typescript
 
 ### Deployed in 
 * Amazon AWS
