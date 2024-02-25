@@ -8,5 +8,5 @@
 * Tailwind CSS
 * SanityCMS  
 
-###Deployed in 
+### Deployed in 
 * Amazon AWS
