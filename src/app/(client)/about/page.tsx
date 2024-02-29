@@ -29,7 +29,7 @@ const About = () => (
     </p>
     <Header title="Contato" />
     <p className={pStyle}>
-      Caso quiser, você pode entrar em contato comigo através das informações e links a baixo.
+      Caso quiser, você pode entrar em contato comigo através das informações e links a baixo!
     </p>
     <SocialMedia hidden={false} />
     <SocialMediaLinks hidden={false} />
