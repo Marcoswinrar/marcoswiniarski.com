@@ -20,7 +20,8 @@ import Post from "../components/Post";
   return result;
 }
 
-export const revalidate = 10;
+
+export const dynamic = 'force-dynamic';
 
 const Home = async () => {
   const posts: Post[] = await getPosts()
