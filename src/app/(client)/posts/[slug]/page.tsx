@@ -57,7 +57,8 @@ const Post = async ({ params }: Params) => {
         <Header title={post?.title} />
         <h2>{post?.excerpt}</h2>
       </header>
-      <section className={richTextStyle}>
+      <section 
+        className={richTextStyle}>
         <PortableText
           components={portableTextComponent}
           value={post?.body}
@@ -93,11 +94,11 @@ const articleStyle = `
 
 const richTextStyle = `
   mt-12
-  prose-headings:my-5
+  prose-headings:my-3
   prose-headings:text-purple-500
-  prose-headings:text-1xl
+  prose-headings:text-[1.3rem]
   prose-heading:text-2xl
-  prose-p:mb-5
+  prose-p:mb-3
   prose-p:leading-7
   prose-li:list-disc
   prose-li:leading-7
